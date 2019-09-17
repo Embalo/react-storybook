@@ -20,7 +20,8 @@
   },
   "homepage": "https://github.com/Embalo/react-storybook#readme",
   "dependencies": {
-    "react": "^16.9.0"
+    "react": "^16.9.0",
+    "styled-components": "^4.3.2"
   },
   "devDependencies": {
     "@babel/core": "^7.6.0",

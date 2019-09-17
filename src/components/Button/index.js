@@ -1,5 +1,6 @@
 import React from 'react';
+import { Button } from './index.css';
 
 export default ({ children, ...props }) => (
-  <button {...props}>{children}</button>
+  <Button {...props}>{children}</Button>
 );
