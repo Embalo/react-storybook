@@ -18,7 +18,9 @@
     "url": "https://github.com/Embalo/react-storybook/issues"
   },
   "homepage": "https://github.com/Embalo/react-storybook#readme",
-  "dependencies": {},
+  "dependencies": {
+    "react": "^16.9.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.6.0",
     "@storybook/addon-actions": "^5.2.0",
