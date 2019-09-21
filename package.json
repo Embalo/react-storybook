@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "start-storybook -p 6006",
     "build": "build-storybook",
     "deploy": "storybook-to-ghpages",
@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/Embalo/react-storybook#readme",
   "dependencies": {
+    "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "styled-components": "^4.3.2"
   },
@@ -49,6 +50,7 @@
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.14.3",
     "husky": "^3.0.5",
+    "jest": "^24.9.0",
     "lint-staged": "^9.2.5",
     "prettier": "^1.18.2"
   },
