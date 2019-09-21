@@ -10,6 +10,7 @@ Environment for development, documentation, testing and visualization of compone
 
 - 📕 [Storybook](https://storybook.js.org) - Build bulletproof UI components faster.
 - 💅 [Styled components](https://www.styled-components.com/) - Use the best bits of ES6 and CSS to style your apps without stress.
+- 🃏 [Jest](https://jestjs.io/) - A delightful JavaScript Testing Framework with a focus on simplicity.
 - 😎 [Prettier](https://prettier.io/) - Code formatter.
 - 👨‍🏫 [ESLint](https://eslint.org/) - The pluggable linting utility for JavaScript and JSX.
 - 🐶 [Husky](https://github.com/typicode/husky#readme) - To prevent bad git commit.
@@ -18,6 +19,9 @@ Environment for development, documentation, testing and visualization of compone
 ```
 To start server
 $ yarn start
+
+To test
+$ yarn test
 
 To build
 $ yarn build
