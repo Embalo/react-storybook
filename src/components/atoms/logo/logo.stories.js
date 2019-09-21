@@ -1,8 +1,8 @@
 import React from 'react';
+import { storiesOf } from '@storybook/react';
 import Logo from './logo';
+import doc from './logo.md';
 
-export default {
-  title: 'Logo',
-};
-
-export const logo = () => <Logo />;
+storiesOf('Logo', module).add('default', () => <Logo />, {
+  notes: doc,
+});
