@@ -11,7 +11,7 @@ import VisueltRegularWoff2 from './assets/fonts/Visuelt-Regular.woff2';
 export default createGlobalStyle`
   body {
     background: #F4F4F4;
-    font-family: 'Visuelt';
+    font-family: 'Visuelt', sans-serif;
   }
 
   @font-face {
