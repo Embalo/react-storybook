@@ -1,34 +1,25 @@
 import React from 'react';
+import { text, select, boolean } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import Button from './button';
+import notes from './button.md';
 
-storiesOf('Atoms/Button', module)
-  .add('default', () => (
-    <Button onClick={action('clicked')}>black button</Button>
-  ))
-  .add('gray', () => (
-    <Button color="gray" onClick={action('clicked')}>
-      gray button
-    </Button>
-  ))
-  .add('orange', () => (
-    <Button color="orange" onClick={action('clicked')}>
-      orange button
-    </Button>
-  ))
-  .add('white', () => (
-    <Button color="white" onClick={action('clicked')}>
-      white button
-    </Button>
-  ))
-  .add('fullWidth', () => (
-    <Button as="a" fullWidth onClick={action('clicked')}>
-      full width button
-    </Button>
-  ))
-  .add('disabled', () => (
-    <Button disabled onClick={action('clicked')}>
-      white button
-    </Button>
-  ));
+storiesOf('Atoms/Button', module).add(
+  'default',
+  () => (
+    <>
+      <Button
+        color={select('color', ['black', 'gray', 'orange', 'white'], 'black')}
+        as={select('component', ['button', 'a'], 'button')}
+        disabled={boolean('disabled', false)}
+        fullWidth={boolean('full width', false)}
+        onClick={action('clicked')}
+        size={select('size', ['normal', 'small'], 'normal')}
+      >
+        {text('label', 'black button')}
+      </Button>
+    </>
+  ),
+  { notes }
+);

@@ -1,16 +1,24 @@
 import styled from 'styled-components';
 
 export const Component = styled.button`
+  box-sizing: border-box;
   border: 1px solid transparent;
   display: inline-block;
   text-align: center;
+  font-family: inherit;
+  font-weight: bold;
+  letter-spacing: 0.8pt;
   font-size: 16px;
   min-width: 190px;
-  padding: 14px;
+  min-height: 48px;
+  padding: 15px;
+  line-height: 1;
   outline: none;
   cursor: pointer;
+  text-decoration: none;
   width: ${props => (props.fullWidth ? '100%' : 'auto')};
   ${props => colorStyle(props.color)}
+  ${props => props.size === 'small' && small}
   :disabled {
     cursor: not-allowed;
     opacity: 0.5;
@@ -40,6 +48,11 @@ const white = `
 const orange = `
   background: #F79B1C;
   color: white;
+`;
+
+const small = `
+  padding: 10px;
+  min-height: 37px;
 `;
 
 const colorStyle = color => {
