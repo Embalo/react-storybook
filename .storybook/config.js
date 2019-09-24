@@ -1,13 +1,15 @@
 import React from 'react';
 import { configure, addDecorator } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
+import { ThemeProvider } from 'styled-components';
 import GlobalStyle from '../src/globalStyle';
+import theme from '../src/constants/theme';
 
 // Apply global style to stories
 const withGlobal = storyFn => (
   <>
     <GlobalStyle />
-    {storyFn()}
+    <ThemeProvider theme={theme}>{storyFn()}</ThemeProvider>
   </>
 );
 

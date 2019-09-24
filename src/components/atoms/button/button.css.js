@@ -17,7 +17,7 @@ export const Component = styled.button`
   cursor: pointer;
   text-decoration: none;
   width: ${props => (props.fullWidth ? '100%' : 'auto')};
-  ${props => colorStyle(props.color)}
+  ${props => colorStyle(props)}
   ${props => props.size === 'small' && small}
   :disabled {
     cursor: not-allowed;
@@ -25,18 +25,18 @@ export const Component = styled.button`
   }
 `;
 
-const black = `
-  background: black;
+const black = props => `
+  background: ${props.theme.colors.black};
   color: white;
 `;
 
-const gray = `
-  background: #B5B5B5;
+const gray = props => `
+  background: ${props.theme.colors.gray};
   color: white;
 `;
 
-const white = `
-  background: white;
+const white = props => `
+  background: ${props.theme.colors.white};
   color: #CCCCCC;
 
   &:hover {
@@ -45,8 +45,8 @@ const white = `
   }
 `;
 
-const orange = `
-  background: #F79B1C;
+const orange = props => `
+  background: ${props.theme.colors.orange};
   color: white;
 `;
 
@@ -55,15 +55,15 @@ const small = `
   min-height: 37px;
 `;
 
-const colorStyle = color => {
-  switch (color) {
+const colorStyle = props => {
+  switch (props.color) {
     case 'gray':
-      return gray;
+      return gray(props);
     case 'orange':
-      return orange;
+      return orange(props);
     case 'white':
-      return white;
+      return white(props);
     default:
-      return black;
+      return black(props);
   }
 };
