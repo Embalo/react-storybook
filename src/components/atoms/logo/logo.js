@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from './logo.css';
+import * as S from './logo.css';
 
-const Logo = () => <Link as="a" href="/" />;
+const Logo = () => <S.Logo as="a" href="/" />;
 
 export default Logo;

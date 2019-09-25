@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Component } from './button.css';
+import * as S from './button.css';
 
 const Button = ({ children, disabled, ...props }) => (
-  <Component disabled={disabled} {...props}>
+  <S.Button disabled={disabled} {...props}>
     {children}
-  </Component>
+  </S.Button>
 );
 
 Button.propTypes = {

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Component = styled.button`
+export const Button = styled.button`
   box-sizing: border-box;
   border: 1px solid transparent;
   display: inline-block;

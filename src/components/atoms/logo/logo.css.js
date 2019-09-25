@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import logo from './logo.svg';
 
-export const Link = styled.a`
+export const Logo = styled.a`
   background-image: url(${logo});
   background-repeat: no-repeat;
   background-size: contain;
