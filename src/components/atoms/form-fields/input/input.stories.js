@@ -4,8 +4,8 @@ import { text, select, boolean } from '@storybook/addon-knobs';
 import Input from './input';
 import notes from './input.md';
 
-storiesOf('Atoms/FormFields', module).add(
-  'input',
+storiesOf('Atoms/Form Fields', module).add(
+  'Input',
   () => {
     const [inputValue, setInputValue] = useState('');
 

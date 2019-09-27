@@ -8,6 +8,7 @@ const Input = ({ type = 'text', label, onChange, ...rest }) => (
     <S.Input
       type={type}
       onChange={event => onChange && onChange(event.target.value)}
+      hasLabel={label && label.length ? true : false}
       {...rest}
     />
   </S.Container>

@@ -35,6 +35,12 @@
       <td>Callback fired when the value is changed.</td>
     </tr>
     <tr>
+      <td>onClick</td>
+      <td>func</td>
+      <td></td>
+      <td>Callback fired when the button is clicked.</td>
+    </tr>
+    <tr>
       <td>disabled</td>
       <td>bool</td>
       <td></td>
