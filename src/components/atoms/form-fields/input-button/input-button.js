@@ -27,7 +27,7 @@ const InputButton = ({ onClick, onChange, icon, disabled, ...rest }) => (
 InputButton.propTypes = {
   onClick: PropTypes.func,
   onChange: PropTypes.func,
-  icon: PropTypes.node,
+  icon: PropTypes.node.isRequired,
   disabled: PropTypes.bool,
 };
 

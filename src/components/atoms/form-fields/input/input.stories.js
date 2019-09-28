@@ -17,7 +17,7 @@ storiesOf('Atoms/Form Fields', module).add(
           'text'
         )}
         label={text('label', 'Nome')}
-        name={inputValue}
+        value={inputValue}
         placeholder={text('placeholder', 'Leandro Teixeira')}
         onChange={setInputValue}
         disabled={boolean('disabled', false)}

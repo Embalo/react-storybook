@@ -11,6 +11,12 @@
   </thead>
   <tbody>
     <tr>
+      <td>icon</td>
+      <td>node</td>
+      <td></td>
+      <td>The icon of the button element, this props is required.</td>
+    </tr>
+    <tr>
       <td>type</td>
       <td>'string'</td>
       <td>'text'</td>
