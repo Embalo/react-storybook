@@ -21,6 +21,7 @@ storiesOf('Atoms/Form Fields', module).add(
         placeholder={text('placeholder', 'Leandro Teixeira')}
         onChange={setInputValue}
         disabled={boolean('disabled', false)}
+        readOnly={boolean('readonly', false)}
       />
     );
   },

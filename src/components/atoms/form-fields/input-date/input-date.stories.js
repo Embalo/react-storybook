@@ -15,6 +15,7 @@ storiesOf('Atoms/Form Fields', module).add(
         value={inputValue}
         onChange={setInputValue}
         disabled={boolean('disabled', false)}
+        readOnly={boolean('readonly', false)}
       />
     );
   },

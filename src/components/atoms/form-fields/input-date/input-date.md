@@ -35,6 +35,12 @@
       <td></td>
       <td>If `true`, the `input` element will be disabled.</td>
     </tr>
+    <tr>
+      <td>readOnly</td>
+      <td>bool</td>
+      <td></td>
+      <td>If `true`, the `input` element will be read-only.</td>
+    </tr>
   </tbody>
 </table>
 

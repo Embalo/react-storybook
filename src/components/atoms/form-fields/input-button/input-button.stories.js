@@ -18,9 +18,6 @@ storiesOf('Atoms/Form Fields', module).add(
       )}
       placeholder={text('placeholder', 'destinatário, cidade, NF ou pedido')}
       label={text('label', '')}
-      onClick={action('clicked')}
-      onChange={action('changed')}
-      disabled={boolean('disabled', false)}
       icon={select(
         'icon',
         {
@@ -29,6 +26,10 @@ storiesOf('Atoms/Form Fields', module).add(
         },
         searchIcon
       )}
+      onClick={action('clicked')}
+      onChange={action('changed')}
+      disabled={boolean('disabled', false)}
+      readOnly={boolean('readonly', false)}
     />
   ),
   { notes }
