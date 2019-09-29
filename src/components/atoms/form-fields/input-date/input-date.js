@@ -7,22 +7,25 @@ import * as S from './input-date.css';
 
 registerLocale('pt', pt);
 
-const InputDate = ({ placeholder, ...rest }) => {
-  return (
-    <S.Container>
-      <S.DatePicker
-        locale="pt"
-        dateFormat="P"
-        placeholderText={placeholder}
-        {...rest}
-      />
-      <S.Button />
-    </S.Container>
-  );
-};
+const InputDate = ({ placeholder, disabled, value, ...rest }) => (
+  <S.Container disabled={disabled}>
+    <S.DatePicker
+      locale="pt"
+      dateFormat="P"
+      placeholderText={placeholder}
+      disabled={disabled}
+      popperPlacement="top-start"
+      selected={value}
+      {...rest}
+    />
+    <S.ButtonIcon />
+  </S.Container>
+);
 
 InputDate.propTypes = {
   placeholder: PropTypes.string,
+  disabled: PropTypes.bool,
+  value: PropTypes.object,
 };
 
 export default InputDate;

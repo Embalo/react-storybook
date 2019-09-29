@@ -2,10 +2,24 @@ import styled from 'styled-components';
 import ReactDatePicker from 'react-datepicker';
 
 export const Container = styled.label`
+  box-sizing: border-box;
+  border: 1px solid #b5b5b5;
   position: relative;
   width: 198px;
   display: flex;
   margin-bottom: 12px;
+  ${props =>
+    props.disabled &&
+    `
+    pointer-events: none;
+    opacity: 0.5;
+  `}
+  &:hover {
+    border-color: #707070;
+    > span {
+      border-color: #707070;
+    }
+  }
 
   .react-datepicker {
     border: none;
@@ -13,7 +27,7 @@ export const Container = styled.label`
     font-family: inherit;
   }
   .react-datepicker-popper[data-placement^='bottom'] {
-    margin-top: 0;
+    margin: 1px 0px 0px -1px;
   }
   .react-datepicker__triangle {
     display: none;
@@ -28,6 +42,7 @@ export const Container = styled.label`
     color: ${props => props.theme.colors.white};
     font-size: 16px;
     font-weight: normal;
+    line-height: 1.8;
     height: 28px;
     box-shadow: 1px 0 0px 0px ${props => props.theme.colors.gray};
   }
@@ -53,10 +68,14 @@ export const Container = styled.label`
   .react-datepicker__day,
   .react-datepicker__time-name {
     border: 1px solid ${props => props.theme.colors.gray};
+    border-radius: 0;
     margin: -1px -1px 0 0;
   }
   .react-datepicker__day--weekend {
     background-color: #f4f4f4;
+  }
+  .react-datepicker__day--today {
+    color: black;
   }
   .react-datepicker__day:hover,
   .react-datepicker__month-text:hover,
@@ -80,10 +99,10 @@ export const Container = styled.label`
 
     &:after {
       content: '';
-      border: 7px solid transparent;
-      left: 9px;
+      border: 5px solid transparent;
+      left: 11px;
       position: absolute;
-      top: 6px;
+      top: 8px;
     }
   }
   .react-datepicker__navigation--previous {
@@ -91,7 +110,7 @@ export const Container = styled.label`
 
     &:after {
       border-right-color: white;
-      left: 4px;
+      left: 6px;
     }
     &:hover:after {
       border-right-color: black;
@@ -108,51 +127,33 @@ export const Container = styled.label`
   }
 `;
 
-export const Button = styled.div`
-  background-image: url(${props => props.theme.icons.calendar});
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: white;
-  background-size: 50%;
-  border-radius: 0;
-  border: 1px solid #b5b5b5;
-  margin-left: -1px;
-  cursor: pointer;
-  outline: none;
-  flex: 0 0 48px;
-
-  &:focus,
-  &:hover {
-    border-color: #707070;
-    z-index: 2;
-  }
-  :disabled {
-    pointer-events: none;
-    opacity: 0.5;
-  }
-`;
-
 export const DatePicker = styled(ReactDatePicker)`
   padding: 12px 20px 11px;
   background: white;
   border-radius: 0;
   box-sizing: border-box;
-  border: 1px solid #b5b5b5;
+  border: none;
   font-family: inherit;
   font-size: 16px;
   outline: none;
   letter-spacing: 0.8pt;
   width: 100%;
 
-  &:focus,
-  &:hover {
-    border: 1px solid #707070;
-  }
   &::placeholder {
     color: #b5b5b5;
   }
-  :disabled {
-    pointer-events: none;
-    opacity: 0.5;
-  }
+`;
+
+export const ButtonIcon = styled.span`
+  background-image: url(${props => props.theme.icons.calendar});
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: white;
+  background-size: 50%;
+  border-radius: 0;
+  border: none;
+  border-left: 1px solid #b5b5b5;
+  cursor: pointer;
+  outline: none;
+  flex: 0 0 48px;
 `;
