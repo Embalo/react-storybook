@@ -2,9 +2,9 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { text, select, boolean } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
+import searchIcon from 'assets/icons/search.svg';
+import calendarIcon from 'assets/icons/calendar.svg';
 import InputButton from './input-button';
-import searchIcon from '../../../../assets/icons/search.svg';
-import calendarIcon from '../../../../assets/icons/calendar.svg';
 import notes from './input-button.md';
 
 storiesOf('Atoms/Form Fields', module).add(
