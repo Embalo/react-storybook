@@ -10,12 +10,12 @@ storiesOf('Atoms/Button', module).add(
   () => (
     <>
       <Button
-        color={select('color', ['black', 'gray', 'orange', 'white'], 'black')}
-        as={select('component', ['button', 'a'], 'button')}
+        color={select('color', ['black', 'gray', 'orange', 'white'])}
+        as={select('component', ['button', 'a'])}
         onClick={action('clicked')}
-        size={select('size', ['normal', 'small'], 'normal')}
-        fullWidth={boolean('full width', false)}
-        disabled={boolean('disabled', false)}
+        size={select('size', ['normal', 'small'])}
+        fullWidth={boolean('full width')}
+        disabled={boolean('disabled')}
       >
         {text('label', 'simple button')}
       </Button>

@@ -8,6 +8,18 @@ const Button = ({ children, ...props }) => (
 
 Button.propTypes = {
   children: PropTypes.string.isRequired,
+  as: PropTypes.oneOf(['button', 'a']),
+  color: PropTypes.oneOf(['black', 'gray', 'orange', 'white']),
+  size: PropTypes.oneOf(['normal', 'small']),
+  fullSize: PropTypes.bool,
+  disabled: PropTypes.bool,
+  onClick: PropTypes.func,
+};
+
+Button.defaultProps = {
+  as: 'button',
+  color: 'black',
+  size: 'normal',
 };
 
 export default Button;
