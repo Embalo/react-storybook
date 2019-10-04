@@ -12,9 +12,9 @@
   <tbody>
     <tr>
       <td>icon</td>
-      <td>node</td>
+      <td>string of available icons</td>
       <td></td>
-      <td>The icon of the button element, this props is required.</td>
+      <td>The icon of the button element, this props is required. <a href="/story/icons--icons">See available icons</a></td>
     </tr>
     <tr>
       <td>type</td>

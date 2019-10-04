@@ -9,7 +9,7 @@ export const Container = styled.div`
 export const InputButton = styled(Input)``;
 
 export const Button = styled.button`
-  background-image: url(${props => props.icon});
+  background-image: url(${props => props.theme.icons[props.icon]});
   background-repeat: no-repeat;
   background-position: center;
   background-color: white;

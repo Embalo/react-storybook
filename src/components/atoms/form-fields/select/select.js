@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import * as S from './select.css';
 import InputButton from '../input-button/input-button';
-import arrowDown from '../../../../assets/icons/arrow-down.svg';
 
 const Select = ({ options, placeholder, onChange }) => {
   const [selected, setSelected] = useState('');
@@ -18,7 +17,7 @@ const Select = ({ options, placeholder, onChange }) => {
         <InputButton
           placeholder={placeholder}
           value={selected && selected.label}
-          icon={arrowDown}
+          icon="arrow-down"
           readOnly
         />
       </S.Select>

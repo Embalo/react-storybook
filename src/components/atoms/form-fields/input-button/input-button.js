@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import theme from 'constants/theme';
 import * as S from './input-button.css';
 
 let InputButtonValue;
@@ -27,7 +28,7 @@ const InputButton = ({ onClick, onChange, icon, disabled, ...rest }) => (
 InputButton.propTypes = {
   onClick: PropTypes.func,
   onChange: PropTypes.func,
-  icon: PropTypes.node.isRequired,
+  icon: PropTypes.oneOf(Object.keys(theme.icons)).isRequired,
   disabled: PropTypes.bool,
 };
 
