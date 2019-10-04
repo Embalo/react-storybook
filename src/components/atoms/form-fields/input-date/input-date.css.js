@@ -80,7 +80,10 @@ export const Container = styled.label`
   .react-datepicker__day:hover,
   .react-datepicker__month-text:hover,
   .react-datepicker__quarter-text:hover,
-  .react-datepicker__day--selected {
+  .react-datepicker__day--selected,
+  .react-datepicker__day--keyboard-selected,
+  .react-datepicker__month-text--keyboard-selected,
+  .react-datepicker__quarter-text--keyboard-selected {
     background-color: ${props => props.theme.colors.black};
     border: 1px solid ${props => props.theme.colors.black};
     color: ${props => props.theme.colors.white};
