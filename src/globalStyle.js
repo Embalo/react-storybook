@@ -12,6 +12,7 @@ export default createGlobalStyle`
   body {
     background: #F4F4F4;
     font-family: 'Visuelt', sans-serif;
+    margin: 0;
   }
 
   @font-face {
